@@ -15,25 +15,53 @@ const displayDate = () => {
  
 
 // Write a JavaScript program to convert a number to a string.
+const addMe = () => {
 let num = 15
 num.toString()
 console.log(num.toString())
+document.getElementById("display-element").innerHTML = num.toString();
+}
 
 // Write a JavaScript program to convert a string to the number.
-let x = '15'
-parseInt(x)
-console.log(parseInt(x))
+const parseIntMe =()=> {
+  let x = '15';
+  parseInt(x);
+  console.log(parseInt(x));
+  document.getElementById("display-element").innerHTML = parseInt(x);
+}
 
 
 // Write a JavaScript program that takes in different datatypes and prints out whether they are a:
-  // * Boolean
-  // * Null
-  // * Undefined
-  // * Number
-  // * NaN
-  // * String
-  
+ const whatDataType = (something)=>{ 
+  // write a function that takes in a variable and returns its Datatype
+  return typeof something;
+ }  
 
+ // * Boolean
+console.log(whatDataType(true))
+  
+// * String
+ let str1 = "dogs"
+console.log(whatDataType(str1))
+  // * Null 
+let blackhole = null
+console.log(whatDataType(blackhole))
+
+// * Function
+console.log(whatDataType(parseIntMe))
+
+// * Undefined
+let air 
+console.log(whatDataType(air))
+
+// * Number
+let bodyweight = 110
+console.log(whatDataType(bodyweight))
+
+  // * NaN
+console.log(whatDataType(NaN))
+
+ 
   
 // Write a JavaScript program that adds 2 numbers together.
 const num1 = 5;
@@ -59,9 +87,17 @@ console.log(testNum(-5));
 
 // Write a JavaScript program that runs when 1 of 2 things are true.
 
+    // OR = || true as long as 1 is true
+let x = true || false;
+console.log(x);
+
 
 
 // Write a JavaScript program that runs when both things are not true.  
+    // AND = && true if both are true
+let y = !true && !true;
+console.log(y);
+
 
 // ***************************
 //         PART TWO
@@ -74,8 +110,6 @@ console.log(testNum(-5));
 // 5. Or go use the `npm start` command and navigate to localhost:8080 (ctrl + C to close)
 // 6. go to `index.html` 
 // 7. create inputs, buttons and event listeners that render the code blocks you built above to the DOM.
-
-
 
 
 // Additional Resources
